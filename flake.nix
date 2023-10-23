@@ -1,5 +1,5 @@
 {
-  description = "srid/haskell-template: Nix template for Haskell projects";
+  description = "srid/thinking-with-types: Nix template for Haskell projects";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     systems.url = "github:nix-systems/default";
@@ -37,7 +37,7 @@
           # Add your package overrides here
           settings = {
             /*
-            haskell-template = {
+            thinking-with-types = {
               haddock = false;
             };
             aeson = {
@@ -76,12 +76,12 @@
         };
 
         # Default package & app.
-        packages.default = self'.packages.haskell-template;
-        apps.default = self'.apps.haskell-template;
+        packages.default = self'.packages.thinking-with-types;
+        apps.default = self'.apps.thinking-with-types;
 
         # Default shell.
         devShells.default = pkgs.mkShell {
-          name = "haskell-template";
+          name = "thinking-with-types";
           meta.description = "Haskell development environment";
           # See https://zero-to-flakes.com/haskell-flake/devshell#composing-devshells
           inputsFrom = [
